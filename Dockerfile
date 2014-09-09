@@ -2,7 +2,7 @@ FROM debian:latest
 
 MAINTAINER Athanasios Douitsis <aduitsis@cpan.org>
 
-RUN apt-get update && apt-get install -y vim curl apache2 php5 php-pear php5-mysql libapache2-mod-shib2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y supervisor vim curl apache2 php5 php-pear php5-mysql libapache2-mod-shib2 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN a2enmod shib2
 
