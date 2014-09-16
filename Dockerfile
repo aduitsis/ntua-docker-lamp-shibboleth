@@ -22,6 +22,6 @@ RUN mkdir /var/www/secure && echo '<?php phpinfo(); ?>' > /var/www/secure/index.
 
 ADD attribute-map.xml /etc/shibboleth/attribute-map.xml
 
-CMD ["/root/start-services.sh"]
+### CMD ["/root/start-services.sh"]
 
 EXPOSE 80 443
