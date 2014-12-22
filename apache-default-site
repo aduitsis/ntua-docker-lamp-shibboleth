@@ -34,5 +34,10 @@
 		ShibRequestSetting requireSession 1
 		require valid-user
 	</Location>
+	<Location /lazy>
+		AuthType shibboleth
+		ShibRequireSession Off
+		Require Shibboleth
+	</Location>
 
 </VirtualHost>
