@@ -36,8 +36,9 @@
 	</Location>
 	<Location /lazy>
 		AuthType shibboleth
-		ShibRequireSession Off
-		Require Shibboleth
+		#was: ShibRequireSession Off
+		ShibRequestSetting requireSession false
+		Require shibboleth
 	</Location>
 
 </VirtualHost>
