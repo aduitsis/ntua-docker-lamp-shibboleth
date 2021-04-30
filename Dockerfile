@@ -1,10 +1,10 @@
-FROM debian:latest
+FROM  php:apache
 
 MAINTAINER Athanasios Douitsis <aduitsis@cpan.org>
 
-RUN apt-get update && apt-get install -y supervisor vim curl apache2 php5 php-pear php5-mysql libapache2-mod-shib2 && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-RUN a2enmod shib2
+RUN apt-get update && apt-get install -y supervisor vim curl apache2 shibboleth-sp2-utils  libapache2-mod-shib2 && apt-get clean && rm -rf /var/lib/apt
+/lists/*
+RUN a2enmod shib
 
 ADD apache-default-site /etc/apache2/sites-available/default
 
@@ -22,6 +22,4 @@ RUN mkdir /var/www/secure && echo '<?php phpinfo(); ?>' > /var/www/secure/index.
 
 ADD attribute-map.xml /etc/shibboleth/attribute-map.xml
 
-### CMD ["/root/start-services.sh"]
-
-EXPOSE 80 443
+#CMD ["/root/start-services.sh"]
