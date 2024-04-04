@@ -129,5 +129,8 @@
     <Attribute name="urn:oid:2.5.4.11" id="ou"/>
     <Attribute name="urn:oid:2.5.4.15" id="businessCategory"/>
     <Attribute name="urn:oid:2.5.4.19" id="physicalDeliveryOfficeName"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.969.100.1.22" id="ntuapersonamkanumber"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.969.100.1.40" id="ntuapersonafmnumber"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.969.100.1.23" id="ntuastudentregistrationid"/>
 
 </Attributes>
